@@ -184,7 +184,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.__setNameToLabels() # Zuweisung der Personenname auf Labels im MainWindow
         self.updateTrialNumber()
         self.background = QPdfDocument(self)
-        self.background.load(r"resources\Hintergrund game.pdf")
+        self.background.load("resources" + os.sep + "Hintergrund game.pdf")
         self.pushButton_eingabe.clicked.connect(self.openSelectionWindow) # Oeffnen des Auswahlfensters
         
     def paintEvent(self, event):
